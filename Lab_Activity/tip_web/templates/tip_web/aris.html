@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIP ARIS</title>
+    <link rel="stylesheet" href="{% static 'tip_web/css/aris.css' %}">
+</head>
+<body>
+    <header class="header">
+        <img src="{% static 'tip_web/global/img/tip_logo.png' %}" alt="TIP Logo" class="logo">
+        <h1 class="title">Academic Records and Information System (ARIS)</h1>
+    </header>
+
+    <main class="content">
+        <section class="intro">
+            <h2>Welcome to TIP ARIS</h2>
+            <p>
+                The Academic Records and Information System (ARIS) provides TIP students with access to grades, schedules, and other academic information.
+            </p>
+            <a href="https://student-mla.tip.edu.ph/login" class="btn" target="_blank">Go to ARIS</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© Technological Institute of the Philippines</p>
+    </footer>
+
+    <script src="{% static 'tip_web/js/aris.js' %}"></script>
+</body>
+</html>

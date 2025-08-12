@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Page Not Found | TIP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'tip_web/css/page404.css' %}">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'tip_web/page404/img/tip_logo.png' %}" alt="TIP Logo">
+        </div>
+
+        <div class="content">
+            <h1 class="glow">404</h1>
+            <h2>Oops! Page Not Found</h2>
+            <p>The page you’re looking for may have been moved, deleted, or never existed.</p>
+
+            <a href="{% url 'homepage_template' %}" class="btn">Return to Homepage</a>
+        </div>
+    </div>
+
+    <script src="{% static 'tip_web/js/page404.js' %}"></script>
+</body>
+</html>

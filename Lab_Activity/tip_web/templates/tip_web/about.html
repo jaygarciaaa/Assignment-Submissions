@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | TIP</title>
+  <link rel="stylesheet" href="{% static 'tip_web/css/about.css' %}">
+</head>
+<body>
+  <header class="header">
+    <img src="{% static 'tip_web/global/img/tip_logo.png' %}" alt="TIP Logo" class="logo">
+    <h1>About the Technological Institute of the Philippines</h1>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Our Mission</h2>
+      <p>The Technological Institute of the Philippines (TIP) is a non-sectarian, private institution founded in 1962. We are committed to fostering technological innovation and engineering excellence.</p>
+      <p>With campuses in Quezon City and Manila, TIP offers programs accredited by CHED and international bodies like ABET, emphasizing real-world skills and future-ready tech.</p>
+    </section>
+  </main>
+
+  <script src="{% static 'tip_web/js/about.js' %}"></script>
+</body>
+</html>

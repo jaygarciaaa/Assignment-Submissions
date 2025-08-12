@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIP Career Center</title>
+    <link rel="stylesheet" href="{% static 'tip_web/css/career_center.css' %}">
+</head>
+<body>
+    <header class="career-header">
+        <img src="{% static 'tip_web/global/img/tip_seal.png' %}" alt="TIP Seal" class="tip-seal">
+        <h1>Technological Institute of the Philippines</h1>
+        <img src="{% static 'tip_web/global/img/tip_logo.png' %}" alt="TIP Logo" class="tip-logo">
+    </header>
+
+    <main class="career-main">
+        <section class="career-intro">
+            <h2>Career Center</h2>
+            <p>
+                Welcome to the TIP Career Center!  
+                Our mission is to connect students and alumni with industry opportunities,  
+                providing guidance and resources to help you achieve your career goals.
+            </p>
+            <button onclick="window.open('https://tip.edu.ph/', '_blank')">Visit TIP</button>
+        </section>
+    </main>
+
+    <footer class="career-footer">
+        <p>&copy; 2025 Technological Institute of the Philippines. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{% static 'tip_web/js/career_center.js' %}"></script>
+</body>
+</html>

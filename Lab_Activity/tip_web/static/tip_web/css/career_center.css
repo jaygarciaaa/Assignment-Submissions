@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.career-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcc00;
+    padding: 20px;
+    gap: 20px;
+}
+
+.career-header img {
+    height: 80px;
+}
+
+.tip-seal {
+    height: 100px;
+}
+
+.tip-logo {
+    height: 100px;
+}
+
+.career-header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.career-main {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.career-intro h2 {
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.career-intro p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.career-intro button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.career-intro button:hover {
+    background-color: #e6b800;
+}
+
+.career-footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    border-top: 2px solid #ffcc00;
+}
+
+@keyframes pulseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulseAnim 0.4s ease-in-out;
+}

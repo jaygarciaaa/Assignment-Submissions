@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technological Institute of the Philippines</title>
+    <link rel="stylesheet" href="{% static 'tip_web/css/homepage.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'tip_web/global/img/tip_seal.png' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="{% static 'tip_web/global/img/tip_logo.png' %}" alt="TIP Logo" class="logo">
+            <h1>Technological Institute of the Philippines</h1>
+        </div>
+        <nav class="nav">
+            <a href="{% url 'about_template' %}">About</a>
+            <a href="{% url 'career_center_template' %}">Career Center</a>
+            <a href="{% url 'aris_template' %}">ARIS</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to TIP</h2>
+            <p>Excellence through Technology and Innovation</p>
+            <a href="https://tip.edu.ph" target="_blank" class="btn">Visit TIP</a>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Why Choose TIP?</h2>
+        <p>
+            TIP is committed to providing world-class education that equips students with the skills needed for the future. 
+            Join our diverse and dynamic community and prepare to excel in your chosen career.
+        </p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Technological Institute of the Philippines. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{% static 'tip_web/js/homepage.js' %}"></script>
+</body>
+</html>
