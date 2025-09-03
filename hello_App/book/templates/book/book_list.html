@@ -1,0 +1,44 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'book/css/book_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Book List</h2>
+
+<a href="{% url 'book_add' %}" class="btn btn-primary mb-3">➕ Add New Book</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.year_published }}</td>
+            <td>
+                <a href="{% url 'book_update' book.pk %}" class="btn btn-warning btn-sm">✏️ Edit</a>
+                <a href="{% url 'book_delete' book.pk %}" class="btn btn-danger btn-sm">🗑 Delete</a>
+            </td>
+        </tr>
+    {% empty %}
+        <tr>
+            <td colspan="4" class="text-center">No books available.</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'book/js/book_list.js' %}"></script>
+{% endblock %}

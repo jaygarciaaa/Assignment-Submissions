@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Container */
+.delete-container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-delete {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #34495e;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}

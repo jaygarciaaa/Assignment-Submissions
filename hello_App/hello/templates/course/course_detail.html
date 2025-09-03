@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ course.code }} - {{ course.name }}</title>
+</head>
+<body>
+    <h1>{{ course.code }} - {{ course.name }}</h1>
+
+    <p><strong>Course Code:</strong> {{ course.code }}</p>
+    <p><strong>Course Name:</strong> {{ course.name }}</p>
+
+    <h2>Enrolled Students</h2>
+    {% if course.students.all %}
+        <ul>
+            {% for student in course.students.all %}
+                <li>
+                    {{ student.first_name }} {{ student.last_name }} ({{ student.email }})
+                </li>
+            {% empty %}
+                <p>No students enrolled in this course yet.</p>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No students enrolled in this course yet.</p>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'course_list' %}">Back to Course List</a> |
+    <a href="{% url 'course_update' course.pk %}">Edit</a> |
+    <a href="{% url 'course_delete' course.pk %}">Delete</a>
+</body>
+</html>

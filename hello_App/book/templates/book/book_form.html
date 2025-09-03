@@ -1,0 +1,21 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'book/css/book_form.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{% if form.instance.pk %}Edit Book{% else %}Add New Book{% endif %}</h2>
+
+<form method="post" class="card p-4 shadow-sm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">💾 Save</button>
+    <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'book/js/book_form.js' %}"></script>
+{% endblock %}

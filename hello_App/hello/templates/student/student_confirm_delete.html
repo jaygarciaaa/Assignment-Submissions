@@ -1,0 +1,22 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Delete Student</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'student/css/student_confirm_delete.css' %}">
+</head>
+<body>
+  <div class="delete-container">
+    <h1>⚠️ Confirm Delete</h1>
+    <p>Are you sure you want to delete <strong>{{ student.first_name }} {{ student.last_name }}</strong>?</p>
+
+    <form method="post" class="delete-form">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-delete">🗑 Yes, Delete</button>
+      <a href="{% url 'student_list' %}" class="btn btn-cancel">❌ Cancel</a>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Students</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'student/css/student_list.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Student List</h1>
+    <p class="actions">
+      <a href="{% url 'student_create' %}" class="btn btn-add">➕ Add Student</a>
+      <a href="/admin/" class="btn btn-admin">⚙️ Admin</a>
+    </p>
+    
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in students %}
+          <tr>
+            <td>{{ s.student_id }}</td>
+            <td>{{ s.first_name }} {{ s.last_name }}</td>
+            <td>{{ s.course }}</td>
+            <td>{{ s.year_level }}</td>
+            <td>
+              <a href="{% url 'student_update' s.pk %}" class="btn btn-edit">✏️ Edit</a>
+              <a href="{% url 'student_delete' s.pk %}" class="btn btn-delete">🗑 Delete</a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="5" class="no-data">No students yet.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

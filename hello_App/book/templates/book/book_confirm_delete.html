@@ -1,0 +1,22 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'book/css/book_confirm_delete.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Delete Book</h2>
+
+<p>Are you sure you want to delete <strong>{{ book.title }}</strong> by {{ book.author }}?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">🗑 Yes, Delete</button>
+    <a href="{% url 'book_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'book/js/book_confirm_delete.js' %}"></script>
+{% endblock %}
